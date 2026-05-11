@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>HANN Portfolio</title>
 
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,277 +17,228 @@
 
 <body>
 
-<nav class="navbar">
+  <!-- NAVBAR -->
 
-  <div class="logo">HANN</div>
+  <nav class="navbar">
 
-  <ul class="nav-links">
-    <li><a class="active" data-page="0">Home</a></li>
-    <li><a data-page="1">About</a></li>
-    <li><a data-page="2">Projects</a></li>
-    <li><a data-page="3">Skills</a></li>
-    <li><a data-page="4">Contact</a></li>
-  </ul>
+    <div class="logo">HANN</div>
 
-</nav>
+    <div class="nav-links">
 
-<div class="container" id="container">
+      <button class="nav-btn active" data-page="0">
+        Home
+      </button>
 
-  <!-- HOME -->
+      <button class="nav-btn" data-page="1">
+        About
+      </button>
 
-  <section class="page">
+      <button class="nav-btn" data-page="2">
+        Projects
+      </button>
 
-    <div class="left">
+      <button class="nav-btn" data-page="3">
+        Skills
+      </button>
 
-      <div class="badge">
-        ⚡ Electrical Engineering Student
-      </div>
-
-      <h1>
-        Modern<br>
-        <span>Portfolio</span>
-      </h1>
-
-      <p>
-        Passionate about electrical engineering,
-        embedded systems, automation,
-        and modern web technologies.
-      </p>
-
-      <div class="buttons">
-
-        <a class="btn primary">View Projects</a>
-
-        <a class="btn secondary">Contact Me</a>
-
-      </div>
+      <button class="nav-btn" data-page="4">
+        Contact
+      </button>
 
     </div>
 
-    <div class="card">
+  </nav>
 
-      <h2>Current Focus</h2>
+  <!-- SLIDER -->
 
-      <p>
-        Embedded Systems & Power Analysis
-      </p>
+  <main class="slider" id="slider">
 
-      <div class="card-item">
-        ⚡ Arduino & ESP32 Projects
-      </div>
+    <!-- HOME -->
 
-      <div class="card-item">
-        🔌 Electrical Power Analysis
-      </div>
+    <section class="page home">
 
-      <div class="card-item">
-        💻 Modern Web Development
-      </div>
+      <div class="content">
 
-    </div>
+        <div class="badge">
+          ⚡ Electrical Engineering Student
+        </div>
 
-  </section>
-
-  <!-- ABOUT -->
-
-  <section class="page">
-
-    <div class="left">
-
-      <h1>About Me</h1>
-
-      <p>
-        Engineering student with interests in automation,
-        microcontrollers, and modern digital systems.
-      </p>
-
-    </div>
-
-    <div class="about-grid">
-
-      <div class="about-card">Control Systems</div>
-      <div class="about-card">MATLAB</div>
-      <div class="about-card">Arduino</div>
-      <div class="about-card">ESP32</div>
-      <div class="about-card">Power Systems</div>
-      <div class="about-card">Web Design</div>
-
-    </div>
-
-  </section>
-
-  <!-- PROJECT -->
-
-  <section class="page">
-
-    <div class="left">
-
-      <h1>Projects</h1>
-
-      <p>
-        Some projects and experiments
-        I’ve worked on.
-      </p>
-
-    </div>
-
-    <div class="project-grid">
-
-      <div class="project-card">
-
-        <h3>🚀 Smart Monitoring</h3>
+        <h1>
+          Modern <br>
+          <span>Portfolio</span>
+        </h1>
 
         <p>
-          IoT monitoring system using ESP32
-          and sensors.
+          Passionate about electrical engineering,
+          embedded systems, automation,
+          and modern web technologies.
         </p>
-
-        <a class="btn primary">Explore</a>
 
       </div>
 
-      <div class="project-card">
+    </section>
 
-        <h3>⚡ Power Analysis</h3>
+    <!-- ABOUT -->
+
+    <section class="page about">
+
+      <div class="content">
+
+        <h1>About Me</h1>
 
         <p>
-          Electrical system calculations
-          and simulations.
+          Engineering student with interests in automation,
+          microcontrollers, power systems,
+          and modern digital technology.
         </p>
 
-        <a class="btn primary">Explore</a>
+        <div class="grid">
+
+          <div class="box">Arduino</div>
+          <div class="box">ESP32</div>
+          <div class="box">MATLAB</div>
+          <div class="box">Control Systems</div>
+
+        </div>
 
       </div>
 
-    </div>
+    </section>
 
-  </section>
+    <!-- PROJECTS -->
 
-  <!-- SKILLS -->
+    <section class="page projects">
 
-  <section class="page">
+      <div class="content">
 
-    <div class="left">
+        <h1>Projects</h1>
 
-      <h1>Skills</h1>
+        <div class="project-list">
 
-      <p>
-        Technologies and tools I use.
-      </p>
+          <div class="project">
+            🚀 IoT Monitoring System
+          </div>
 
-    </div>
+          <div class="project">
+            ⚡ Power Analysis
+          </div>
 
-    <div class="skills-box">
+          <div class="project">
+            💻 Modern Portfolio Website
+          </div>
 
-      <div class="skill">
+        </div>
 
-        <div class="skill-top">
+      </div>
+
+    </section>
+
+    <!-- SKILLS -->
+
+    <section class="page skills">
+
+      <div class="content">
+
+        <h1>Skills</h1>
+
+        <div class="skill">
           <span>HTML & CSS</span>
-          <span>90%</span>
+          <div class="bar">
+            <div style="width:90%"></div>
+          </div>
         </div>
 
-        <div class="bar">
-          <div style="width:90%"></div>
-        </div>
-
-      </div>
-
-      <div class="skill">
-
-        <div class="skill-top">
+        <div class="skill">
           <span>Arduino & ESP32</span>
-          <span>85%</span>
+          <div class="bar">
+            <div style="width:85%"></div>
+          </div>
         </div>
 
-        <div class="bar">
-          <div style="width:85%"></div>
-        </div>
-
-      </div>
-
-      <div class="skill">
-
-        <div class="skill-top">
+        <div class="skill">
           <span>MATLAB</span>
-          <span>75%</span>
-        </div>
-
-        <div class="bar">
-          <div style="width:75%"></div>
+          <div class="bar">
+            <div style="width:75%"></div>
+          </div>
         </div>
 
       </div>
 
-    </div>
+    </section>
 
-  </section>
+    <!-- CONTACT -->
 
-  <!-- CONTACT -->
+    <section class="page contact">
 
-  <section class="page">
+      <div class="content">
 
-    <div></div>
+        <h1>Contact</h1>
 
-    <div class="contact-card">
+        <p>
+          Open for collaboration and engineering projects.
+        </p>
 
-      <h2>
-        Let’s Work Together
-      </h2>
+        <div class="buttons">
 
-      <p>
-        Open for collaboration,
-        engineering projects,
-        and creative ideas.
-      </p>
+          <a href="mailto:contact@hann.is-a.dev" class="btn white">
+            Email
+          </a>
 
-      <div class="buttons">
+          <a href="https://github.com/r-hann" class="btn dark">
+            GitHub
+          </a>
 
-        <a href="mailto:wahyupp168@hann.is-a.dev"
-        class="btn primary">
-          Email Me
-        </a>
-
-        <a href="https://github.com/r-hann"
-        class="btn secondary">
-          GitHub
-        </a>
+        </div>
 
       </div>
 
-    </div>
+    </section>
 
-  </section>
+  </main>
 
-</div>
+  <script>
 
-<script>
+    const slider =
+      document.getElementById("slider");
 
-const container =
-document.getElementById("container");
+    const buttons =
+      document.querySelectorAll(".nav-btn");
 
-const links =
-document.querySelectorAll(".nav-links a");
+    buttons.forEach(btn => {
 
-links.forEach(link=>{
+      btn.addEventListener("click", () => {
 
-  link.addEventListener("click",()=>{
+        const page = btn.dataset.page;
 
-    const page = link.dataset.page;
+        slider.style.transform =
+          `translateX(-${page * 100}vw)`;
 
-    container.style.transform =
-    `translateX(-${page * 100}vw)`;
+        buttons.forEach(b =>
+          b.classList.remove("active")
+        );
 
-    links.forEach(l=>
-      l.classList.remove("active")
+        btn.classList.add("active");
+
+      });
+
+    });
+
+    // MATIKAN SCROLL
+
+    window.addEventListener(
+      "wheel",
+      e => e.preventDefault(),
+      { passive:false }
     );
 
-    link.classList.add("active");
+    window.addEventListener(
+      "touchmove",
+      e => e.preventDefault(),
+      { passive:false }
+    );
 
-  });
-
-});
-
-</script>
+  </script>
 
 </body>
+
 </html>
