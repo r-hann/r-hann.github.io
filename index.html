@@ -1,187 +1,727 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hann Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HANN Portfolio</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-</head>
-<body>  <nav class="navbar">
-    <div class="logo">HANN</div><ul class="nav-links">
-  <li><a href="#home">Home</a></li>
-  <li><a href="#about">About</a></li>
-  <li><a href="#projects">Projects</a></li>
-  <li><a href="#skills">Skills</a></li>
-  <li><a href="#contact">Contact</a></li>
-</ul>
 
-  </nav>  <section id="home" class="hero page-section">
-    <div class="hero-text">
-      <div class="badge">⚡ Electrical Engineering Student</div><h1>
-    Modern<br>
-    <span>Portfolio</span>
-  </h1>
+  <style>
 
-  <p>
-    Passionate about electrical engineering, embedded systems,
-    automation, and modern web technologies.
-  </p>
-
-  <div class="hero-buttons">
-    <a href="#projects" class="btn primary">View Projects</a>
-    <a href="#contact" class="btn secondary">Contact Me</a>
-  </div>
-</div>
-
-<div class="hero-card">
-  <div class="status"></div>
-
-  <h2>Current Focus</h2>
-  <p>Embedded Systems & Power Analysis</p>
-
-  <div class="card-item">⚡ Arduino & ESP32 Projects</div>
-  <div class="card-item">🔌 Electrical Power Analysis</div>
-  <div class="card-item">💻 Modern Web Development</div>
-</div>
-
-  </section>  <section id="about" class="hero page-section">
-    <div class="section-title">
-      <h2>About Me</h2>
-      <p>
-        Engineering student with interests in automation,
-        microcontrollers, and modern digital systems.
-      </p>
-    </div><div class="about-grid">
-  <div class="about-card">Control Systems</div>
-  <div class="about-card">MATLAB</div>
-  <div class="about-card">Arduino</div>
-  <div class="about-card">ESP32</div>
-  <div class="about-card">Power Systems</div>
-  <div class="about-card">Web Design</div>
-</div>
-
-  </section>  <section id="projects" class="hero page-section">
-    <div class="section-title">
-      <h2>Projects</h2>
-      <p>Some projects and experiments I’ve worked on.</p>
-    </div><div class="project-grid">
-  <div class="project-card">
-    <div class="icon">🚀</div>
-    <h3>Smart Monitoring</h3>
-    <p>IoT monitoring system using ESP32 and sensors.</p>
-    <button>Explore</button>
-  </div>
-
-  <div class="project-card">
-    <div class="icon">⚡</div>
-    <h3>Power Analysis</h3>
-    <p>Electrical system calculations and simulations.</p>
-    <button>Explore</button>
-  </div>
-
-  <div class="project-card">
-    <div class="icon">💻</div>
-    <h3>Modern Portfolio</h3>
-    <p>Interactive responsive portfolio website.</p>
-    <button>Explore</button>
-  </div>
-</div>
-
-  </section>  <section id="skills" class="hero page-section">
-    <div class="section-title">
-      <h2>Skills</h2>
-      <p>Technologies and tools I use.</p>
-    </div><div class="skill">
-  <div class="skill-top">
-    <span>HTML & CSS</span>
-    <span>90%</span>
-  </div>
-  <div class="bar"><div style="width: 90%"></div></div>
-</div>
-
-<div class="skill">
-  <div class="skill-top">
-    <span>Arduino & ESP32</span>
-    <span>85%</span>
-  </div>
-  <div class="bar"><div style="width: 85%"></div></div>
-</div>
-
-<div class="skill">
-  <div class="skill-top">
-    <span>MATLAB</span>
-    <span>75%</span>
-  </div>
-  <div class="bar"><div style="width: 75%"></div></div>
-</div>
-
-  </section>  <section id="contact" class="hero page-section">
-    <div class="contact-box">
-      <h2>Let’s Work Together</h2>
-      <p>
-        Open for collaboration, engineering projects,
-        and creative ideas.
-      </p><div class="contact-buttons">
-    <a href="mailto:wahyupp168@gmail.com" class="btn primary">Email Me</a>
-    <a href="https://github.com/r-hann" class="btn secondary">GitHub</a>
-  </div>
-</div>
-
-  </section>  <footer>
-    © 2026 Hann Portfolio — Modern • Minimal • Professional
-  </footer>
-  <script>
-const links = document.querySelectorAll(".nav-links a");
-
-links.forEach(link => {
-  link.addEventListener("click", function(e){
-    e.preventDefault();
-
-    const target = document.querySelector(
-      this.getAttribute("href")
-    );
-
-    target.scrollIntoView({
-      behavior: "smooth"
-    });
-  });
-});
-
-window.addEventListener(
-  "wheel",
-  function(e){
-    e.preventDefault();
-  },
-  { passive:false }
-);
-
-window.addEventListener(
-  "touchmove",
-  function(e){
-    e.preventDefault();
-  },
-  { passive:false }
-);
-
-window.addEventListener(
-  "keydown",
-  function(e){
-    const keys = [
-      "ArrowUp",
-      "ArrowDown",
-      "PageUp",
-      "PageDown",
-      "Space"
-    ];
-
-    if(keys.includes(e.code)){
-      e.preventDefault();
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Inter',sans-serif;
     }
-  },
-  { passive:false }
-);
-</script>
+
+    html,
+    body{
+      width:100%;
+      height:100%;
+      overflow:hidden;
+      background:#050505;
+      color:white;
+    }
+
+    body{
+      position:relative;
+    }
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      background:
+      radial-gradient(circle at top left,
+      rgba(255,255,255,.05),
+      transparent 30%),
+      radial-gradient(circle at bottom right,
+      rgba(255,255,255,.03),
+      transparent 30%);
+      pointer-events:none;
+    }
+
+    /* NAVBAR */
+
+    .navbar{
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      height:90px;
+
+      padding:0 7%;
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      background:rgba(0,0,0,.4);
+      backdrop-filter:blur(12px);
+
+      border-bottom:1px solid rgba(255,255,255,.06);
+
+      z-index:1000;
+    }
+
+    .logo{
+      font-size:2rem;
+      font-weight:900;
+      letter-spacing:1px;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:45px;
+      list-style:none;
+    }
+
+    .nav-links a{
+      text-decoration:none;
+      color:#999;
+      font-size:1rem;
+      position:relative;
+      transition:.3s;
+    }
+
+    .nav-links a:hover{
+      color:white;
+    }
+
+    .nav-links a::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-8px;
+
+      width:0%;
+      height:2px;
+
+      background:white;
+
+      transition:.4s;
+    }
+
+    .nav-links a.active{
+      color:white;
+    }
+
+    .nav-links a.active::after{
+      width:100%;
+    }
+
+    /* MAIN SLIDER */
+
+    main{
+      width:500vw;
+      height:100vh;
+
+      display:flex;
+
+      transition:transform .8s cubic-bezier(.77,0,.18,1);
+    }
+
+    .page{
+      width:100vw;
+      height:100vh;
+
+      flex-shrink:0;
+
+      padding:
+      140px
+      7%
+      60px;
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      gap:60px;
+    }
+
+    /* TEXT */
+
+    .hero-text{
+      max-width:650px;
+    }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+
+      padding:18px 30px;
+
+      border-radius:999px;
+
+      background:rgba(255,255,255,.05);
+
+      border:1px solid rgba(255,255,255,.08);
+
+      margin-bottom:40px;
+
+      color:#ddd;
+      font-size:1.1rem;
+    }
+
+    h1{
+      font-size:6rem;
+      line-height:1;
+      margin-bottom:30px;
+      font-weight:900;
+    }
+
+    h1 span{
+      color:#666;
+    }
+
+    .hero-text p{
+      color:#999;
+      font-size:1.4rem;
+      line-height:1.8;
+      margin-bottom:40px;
+    }
+
+    /* BUTTON */
+
+    .buttons{
+      display:flex;
+      gap:20px;
+    }
+
+    .btn{
+      padding:22px 40px;
+      border-radius:20px;
+      text-decoration:none;
+      font-weight:700;
+      transition:.3s;
+      border:1px solid rgba(255,255,255,.1);
+    }
+
+    .primary{
+      background:white;
+      color:black;
+    }
+
+    .primary:hover{
+      transform:translateY(-4px);
+    }
+
+    .secondary{
+      color:white;
+      background:rgba(255,255,255,.03);
+    }
+
+    .secondary:hover{
+      background:rgba(255,255,255,.08);
+    }
+
+    /* CARD */
+
+    .card{
+      width:500px;
+
+      padding:40px;
+
+      border-radius:35px;
+
+      background:
+      linear-gradient(
+      145deg,
+      rgba(255,255,255,.05),
+      rgba(255,255,255,.02)
+      );
+
+      border:1px solid rgba(255,255,255,.08);
+    }
+
+    .card h2{
+      font-size:2rem;
+      margin-bottom:15px;
+    }
+
+    .card p{
+      color:#999;
+      margin-bottom:30px;
+    }
+
+    .item{
+      padding:24px;
+      border-radius:20px;
+      background:rgba(255,255,255,.03);
+      margin-bottom:20px;
+      color:#eee;
+    }
+
+    /* SECTION TITLE */
+
+    .section-title h2{
+      font-size:5rem;
+      margin-bottom:20px;
+    }
+
+    .section-title p{
+      color:#999;
+      font-size:1.3rem;
+      line-height:1.7;
+    }
+
+    /* ABOUT */
+
+    .about-grid{
+      width:600px;
+
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+
+      gap:25px;
+    }
+
+    .about-card{
+      padding:40px;
+      border-radius:28px;
+
+      background:
+      rgba(255,255,255,.03);
+
+      border:1px solid rgba(255,255,255,.05);
+
+      font-size:1.2rem;
+      font-weight:600;
+
+      transition:.3s;
+    }
+
+    .about-card:hover{
+      transform:translateY(-6px);
+      background:rgba(255,255,255,.05);
+    }
+
+    /* PROJECTS */
+
+    .project-grid{
+      width:650px;
+      display:flex;
+      flex-direction:column;
+      gap:30px;
+    }
+
+    .project-card{
+      padding:35px;
+      border-radius:30px;
+
+      background:
+      rgba(255,255,255,.03);
+
+      border:1px solid rgba(255,255,255,.05);
+    }
+
+    .project-card h3{
+      font-size:2rem;
+      margin:20px 0 10px;
+    }
+
+    .project-card p{
+      color:#999;
+      margin-bottom:25px;
+    }
+
+    .icon{
+      font-size:2rem;
+    }
+
+    /* SKILLS */
+
+    .skills-box{
+      width:650px;
+    }
+
+    .skill{
+      margin-bottom:35px;
+    }
+
+    .skill-top{
+      display:flex;
+      justify-content:space-between;
+      margin-bottom:12px;
+      font-size:1.1rem;
+    }
+
+    .bar{
+      height:16px;
+      border-radius:999px;
+      background:rgba(255,255,255,.08);
+      overflow:hidden;
+    }
+
+    .bar div{
+      height:100%;
+      background:white;
+      border-radius:999px;
+    }
+
+    /* CONTACT */
+
+    .contact-card{
+      width:850px;
+
+      padding:70px;
+
+      border-radius:40px;
+
+      background:
+      linear-gradient(
+      145deg,
+      rgba(255,255,255,.04),
+      rgba(255,255,255,.02)
+      );
+
+      border:1px solid rgba(255,255,255,.08);
+    }
+
+    .contact-card h2{
+      font-size:5rem;
+      margin-bottom:25px;
+    }
+
+    .contact-card p{
+      color:#999;
+      font-size:1.3rem;
+      margin-bottom:40px;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:1200px){
+
+      .page{
+        flex-direction:column;
+        justify-content:center;
+      }
+
+      .hero-text,
+      .card,
+      .project-grid,
+      .skills-box,
+      .about-grid,
+      .contact-card{
+        width:100%;
+        max-width:100%;
+      }
+
+      h1{
+        font-size:4.5rem;
+      }
+
+      .section-title h2{
+        font-size:4rem;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar">
+
+    <div class="logo">HANN</div>
+
+    <ul class="nav-links">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+  </nav>
+
+  <main>
+
+    <!-- HOME -->
+
+    <section class="page" id="home">
+
+      <div class="hero-text">
+
+        <div class="badge">
+          ⚡ Electrical Engineering Student
+        </div>
+
+        <h1>
+          Modern<br>
+          <span>Portfolio</span>
+        </h1>
+
+        <p>
+          Passionate about electrical engineering,
+          embedded systems, automation,
+          and modern web technologies.
+        </p>
+
+        <div class="buttons">
+          <a href="#projects" class="btn primary">
+            View Projects
+          </a>
+
+          <a href="#contact" class="btn secondary">
+            Contact Me
+          </a>
+        </div>
+
+      </div>
+
+      <div class="card">
+
+        <h2>Current Focus</h2>
+
+        <p>
+          Embedded Systems & Power Analysis
+        </p>
+
+        <div class="item">
+          ⚡ Arduino & ESP32 Projects
+        </div>
+
+        <div class="item">
+          🔌 Electrical Power Analysis
+        </div>
+
+        <div class="item">
+          💻 Modern Web Development
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ABOUT -->
+
+    <section class="page" id="about">
+
+      <div class="section-title">
+        <h2>About Me</h2>
+
+        <p>
+          Engineering student with interests in
+          automation, microcontrollers,
+          and modern digital systems.
+        </p>
+      </div>
+
+      <div class="about-grid">
+
+        <div class="about-card">Control Systems</div>
+        <div class="about-card">MATLAB</div>
+        <div class="about-card">Arduino</div>
+        <div class="about-card">ESP32</div>
+        <div class="about-card">Power Systems</div>
+        <div class="about-card">Web Design</div>
+
+      </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+
+    <section class="page" id="projects">
+
+      <div class="section-title">
+        <h2>Projects</h2>
+
+        <p>
+          Some projects and experiments
+          I’ve worked on.
+        </p>
+      </div>
+
+      <div class="project-grid">
+
+        <div class="project-card">
+
+          <div class="icon">🚀</div>
+
+          <h3>Smart Monitoring</h3>
+
+          <p>
+            IoT monitoring system using
+            ESP32 and sensors.
+          </p>
+
+          <a href="#" class="btn primary">
+            Explore
+          </a>
+
+        </div>
+
+        <div class="project-card">
+
+          <div class="icon">⚡</div>
+
+          <h3>Power Analysis</h3>
+
+          <p>
+            Electrical system calculations
+            and simulations.
+          </p>
+
+          <a href="#" class="btn primary">
+            Explore
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SKILLS -->
+
+    <section class="page" id="skills">
+
+      <div class="section-title">
+
+        <h2>Skills</h2>
+
+        <p>
+          Technologies and tools I use.
+        </p>
+
+      </div>
+
+      <div class="skills-box">
+
+        <div class="skill">
+
+          <div class="skill-top">
+            <span>HTML & CSS</span>
+            <span>90%</span>
+          </div>
+
+          <div class="bar">
+            <div style="width:90%"></div>
+          </div>
+
+        </div>
+
+        <div class="skill">
+
+          <div class="skill-top">
+            <span>Arduino & ESP32</span>
+            <span>85%</span>
+          </div>
+
+          <div class="bar">
+            <div style="width:85%"></div>
+          </div>
+
+        </div>
+
+        <div class="skill">
+
+          <div class="skill-top">
+            <span>MATLAB</span>
+            <span>75%</span>
+          </div>
+
+          <div class="bar">
+            <div style="width:75%"></div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- CONTACT -->
+
+    <section class="page" id="contact">
+
+      <div class="contact-card">
+
+        <h2>
+          Let’s Work Together
+        </h2>
+
+        <p>
+          Open for collaboration,
+          engineering projects,
+          and creative ideas.
+        </p>
+
+        <div class="buttons">
+
+          <a
+            href="mailto:contact@hann.is-a.dev"
+            class="btn primary"
+          >
+            Email Me
+          </a>
+
+          <a
+            href="https://github.com/r-hann"
+            class="btn secondary"
+          >
+            GitHub
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script>
+
+    const links =
+    document.querySelectorAll(".nav-links a");
+
+    const main =
+    document.querySelector("main");
+
+    const sections = {
+      "#home":0,
+      "#about":1,
+      "#projects":2,
+      "#skills":3,
+      "#contact":4
+    };
+
+    links.forEach(link=>{
+
+      link.addEventListener("click",e=>{
+
+        e.preventDefault();
+
+        const target =
+        link.getAttribute("href");
+
+        const index =
+        sections[target];
+
+        main.style.transform =
+        `translateX(-${index * 100}vw)`;
+
+        links.forEach(l=>
+          l.classList.remove("active")
+        );
+
+        link.classList.add("active");
+
+      });
+
+    });
+
+  </script>
+
 </body>
 </html>
