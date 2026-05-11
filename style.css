@@ -646,3 +646,54 @@ body::before{
   box-shadow:
   0 10px 40px rgba(0,0,0,.35);
 }
+
+/* MOBILE NAVBAR */
+
+.menu-toggle{
+  display:none;
+
+  font-size:2rem;
+  color:white;
+
+  cursor:pointer;
+}
+
+/* HP */
+
+@media(max-width:768px){
+
+  .menu-toggle{
+    display:block;
+  }
+
+  .nav-links{
+    position:absolute;
+
+    top:90px;
+    right:20px;
+
+    width:220px;
+
+    background:
+    rgba(10,10,10,.95);
+
+    backdrop-filter:blur(20px);
+
+    border:
+    1px solid rgba(255,255,255,.05);
+
+    border-radius:20px;
+
+    padding:25px;
+
+    flex-direction:column;
+    gap:20px;
+
+    display:none;
+  }
+
+  .nav-links.show{
+    display:flex;
+  }
+
+}
