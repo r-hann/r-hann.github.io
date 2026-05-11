@@ -19,7 +19,7 @@
 
   <!-- NAVBAR -->
 
-  <nav class="navbar">
+<nav class="navbar">
 
   <div class="logo">HANN</div>
 
@@ -27,16 +27,31 @@
     ☰
   </div>
 
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#home" class="active">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+  <div class="nav-links" id="navLinks">
+
+    <button class="nav-btn active" data-page="0">
+      Home
+    </button>
+
+    <button class="nav-btn" data-page="1">
+      About
+    </button>
+
+    <button class="nav-btn" data-page="2">
+      Projects
+    </button>
+
+    <button class="nav-btn" data-page="3">
+      Skills
+    </button>
+
+    <button class="nav-btn" data-page="4">
+      Contact
+    </button>
+
+  </div>
 
 </nav>
-
   <!-- SLIDER -->
 
   <main class="slider" id="slider">
@@ -194,46 +209,62 @@
 
   <script>
 
-    const slider =
-      document.getElementById("slider");
+const slider =
+  document.getElementById("slider");
 
-    const buttons =
-      document.querySelectorAll(".nav-btn");
+const buttons =
+  document.querySelectorAll(".nav-btn");
 
-    buttons.forEach(btn => {
+buttons.forEach(btn => {
 
-      btn.addEventListener("click", () => {
+  btn.addEventListener("click", () => {
 
-        const page = btn.dataset.page;
+    const page = btn.dataset.page;
 
-        slider.style.transform =
-          `translateX(-${page * 100}vw)`;
+    slider.style.transform =
+      `translateX(-${page * 100}vw)`;
 
-        buttons.forEach(b =>
-          b.classList.remove("active")
-        );
-
-        btn.classList.add("active");
-
-      });
-
-    });
-
-    // MATIKAN SCROLL
-
-    window.addEventListener(
-      "wheel",
-      e => e.preventDefault(),
-      { passive:false }
+    buttons.forEach(b =>
+      b.classList.remove("active")
     );
 
-    window.addEventListener(
-      "touchmove",
-      e => e.preventDefault(),
-      { passive:false }
-    );
+    btn.classList.add("active");
 
-  </script>
+  });
+
+});
+
+// MATIKAN SCROLL
+
+window.addEventListener(
+  "wheel",
+  e => e.preventDefault(),
+  { passive:false }
+);
+
+window.addEventListener(
+  "touchmove",
+  e => e.preventDefault(),
+  { passive:false }
+);
+
+/* ===================== */
+/* MOBILE MENU */
+/* ===================== */
+
+const menuToggle =
+document.getElementById("menuToggle");
+
+const navLinks =
+document.getElementById("navLinks");
+
+menuToggle.onclick = () => {
+
+  navLinks.classList.toggle("show");
+
+};
+
+</script>
 
 </body>
 
