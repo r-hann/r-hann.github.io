@@ -131,5 +131,57 @@
 
   </section>  <footer>
     © 2026 Hann Portfolio — Modern • Minimal • Professional
-  </footer></body>
-</html>/
+  </footer>
+  <script>
+const links = document.querySelectorAll(".nav-links a");
+
+links.forEach(link => {
+  link.addEventListener("click", function(e){
+    e.preventDefault();
+
+    const target = document.querySelector(
+      this.getAttribute("href")
+    );
+
+    target.scrollIntoView({
+      behavior: "smooth"
+    });
+  });
+});
+
+window.addEventListener(
+  "wheel",
+  function(e){
+    e.preventDefault();
+  },
+  { passive:false }
+);
+
+window.addEventListener(
+  "touchmove",
+  function(e){
+    e.preventDefault();
+  },
+  { passive:false }
+);
+
+window.addEventListener(
+  "keydown",
+  function(e){
+    const keys = [
+      "ArrowUp",
+      "ArrowDown",
+      "PageUp",
+      "PageDown",
+      "Space"
+    ];
+
+    if(keys.includes(e.code)){
+      e.preventDefault();
+    }
+  },
+  { passive:false }
+);
+</script>
+</body>
+</html>
