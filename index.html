@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -13,259 +13,231 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-</head>
 
+</head>
 <body>
 
   <!-- NAVBAR -->
 
-<nav class="navbar">
+  <nav class="navbar">
 
-  <div class="logo">HANN</div>
+    <div class="logo">HANN</div>
 
-  <div class="menu-toggle" id="menuToggle">
-    ☰
-  </div>
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
 
-  <div class="nav-links" id="navLinks">
+    <ul class="nav-links" id="nav-links">
 
-    <button class="nav-btn active" data-page="0">
-      Home
-    </button>
+      <li><a class="active" href="#">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
 
-    <button class="nav-btn" data-page="1">
-      About
-    </button>
+    </ul>
 
-    <button class="nav-btn" data-page="2">
-      Projects
-    </button>
+  </nav>
 
-    <button class="nav-btn" data-page="3">
-      Skills
-    </button>
+  <!-- HERO -->
 
-    <button class="nav-btn" data-page="4">
-      Contact
-    </button>
+  <section class="hero">
 
-  </div>
+    <div class="hero-content">
 
-</nav>
-  <!-- SLIDER -->
+      <div class="badge">
+        ⚡ Electrical Engineering Student
+      </div>
 
-  <main class="slider" id="slider">
+      <h1>
+        Modern <br>
+        <span>Portfolio</span>
+      </h1>
 
-    <!-- HOME -->
+      <p>
+        Passionate about electrical engineering,
+        embedded systems, automation,
+        and modern web technologies.
+      </p>
 
-    <section class="page home">
+      <div class="buttons">
 
-      <div class="content">
+        <a href="#projects" class="btn white">
+          View Projects
+        </a>
 
-        <div class="badge">
-          ⚡ Electrical Engineering Student
-        </div>
-        <h1>
-          Modern <br>
-          <span>Portfolio</span>
-        </h1>
+        <a href="#contact" class="btn dark">
+          Contact Me
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section class="section" id="about">
+
+    <h2>About Me</h2>
+
+    <p class="section-text">
+      Engineering student with interests in automation,
+      microcontrollers, power systems,
+      and modern digital technologies.
+    </p>
+
+    <div class="grid">
+
+      <div class="card">⚙️ Control Systems</div>
+      <div class="card">📊 MATLAB</div>
+      <div class="card">🔌 Arduino</div>
+      <div class="card">📡 ESP32</div>
+      <div class="card">⚡ Power Systems</div>
+      <div class="card">💻 Web Design</div>
+
+    </div>
+
+  </section>
+
+  <!-- PROJECTS -->
+
+  <section class="section" id="projects">
+
+    <h2>Projects</h2>
+
+    <div class="project-grid">
+
+      <div class="project-card">
+
+        <h3>Smart Monitoring</h3>
 
         <p>
-          Passionate about electrical engineering,
-          embedded systems, automation,
-          and modern web technologies.
+          IoT monitoring system using ESP32 and sensors.
         </p>
-        <div class="buttons">
 
-  <a href="#" class="btn white">
-    View Projects
-  </a>
-
-  <a href="#" class="btn dark">
-    Contact Me
-  </a>
-</div>
       </div>
 
-    </section>
+      <div class="project-card">
 
-    <!-- ABOUT -->
-
-    <section class="page about">
-
-      <div class="content">
-
-        <h1>About Me</h1>
+        <h3>Power Analysis</h3>
 
         <p>
-          Engineering student with interests in automation,
-          microcontrollers, power systems,
-          and modern digital technology.
+          Electrical calculations and simulations.
         </p>
 
-        <div class="grid">
-
-          <div class="box">Arduino</div>
-          <div class="box">ESP32</div>
-          <div class="box">MATLAB</div>
-          <div class="box">Control Systems</div>
-
-        </div>
-
       </div>
 
-    </section>
+      <div class="project-card">
 
-    <!-- PROJECTS -->
-
-    <section class="page projects">
-
-      <div class="content">
-
-        <h1>Projects</h1>
-
-        <div class="project-list">
-
-          <div class="project">
-            🚀 IoT Monitoring System
-          </div>
-
-          <div class="project">
-            ⚡ Power Analysis
-          </div>
-
-          <div class="project">
-            💻 Modern Portfolio Website
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- SKILLS -->
-
-    <section class="page skills">
-
-      <div class="content">
-
-        <h1>Skills</h1>
-
-        <div class="skill">
-          <span>HTML & CSS</span>
-          <div class="bar">
-            <div style="width:90%"></div>
-          </div>
-        </div>
-
-        <div class="skill">
-          <span>Arduino & ESP32</span>
-          <div class="bar">
-            <div style="width:85%"></div>
-          </div>
-        </div>
-
-        <div class="skill">
-          <span>MATLAB</span>
-          <div class="bar">
-            <div style="width:75%"></div>
-          </div>
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- CONTACT -->
-
-    <section class="page contact">
-
-      <div class="content">
-
-        <h1>Contact</h1>
+        <h3>Modern Portfolio</h3>
 
         <p>
-          Open for collaboration and engineering projects.
+          Responsive personal portfolio website.
         </p>
-
-        <div class="buttons">
-
-          <a href="mailto:contact@hann.is-a.dev" class="btn white">
-            Email
-          </a>
-
-          <a href="https://github.com/r-hann" class="btn dark">
-            GitHub
-          </a>
-
-        </div>
 
       </div>
 
-    </section>
+    </div>
 
-  </main>
+  </section>
+
+  <!-- SKILLS -->
+
+  <section class="section" id="skills">
+
+    <h2>Skills</h2>
+
+    <div class="skill">
+
+      <div class="skill-top">
+        <span>HTML & CSS</span>
+        <span>90%</span>
+      </div>
+
+      <div class="bar">
+        <div style="width:90%"></div>
+      </div>
+
+    </div>
+
+    <div class="skill">
+
+      <div class="skill-top">
+        <span>Arduino & ESP32</span>
+        <span>85%</span>
+      </div>
+
+      <div class="bar">
+        <div style="width:85%"></div>
+      </div>
+
+    </div>
+
+    <div class="skill">
+
+      <div class="skill-top">
+        <span>MATLAB</span>
+        <span>75%</span>
+      </div>
+
+      <div class="bar">
+        <div style="width:75%"></div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+
+  <section class="section" id="contact">
+
+    <div class="contact-box">
+
+      <h2>Let's Work Together</h2>
+
+      <p>
+        Open for collaboration,
+        engineering projects,
+        and creative ideas.
+      </p>
+
+      <div class="buttons">
+
+        <a href="mailto:contact@hann.is-a.dev" class="btn white">
+          Email Me
+        </a>
+
+        <a href="https://github.com/r-hann" class="btn dark">
+          GitHub
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+    © 2026 HANN Portfolio
+  </footer>
+
+  <!-- JS -->
 
   <script>
 
-const slider =
-  document.getElementById("slider");
+    const toggle = document.getElementById("menu-toggle");
+    const nav = document.getElementById("nav-links");
 
-const buttons =
-  document.querySelectorAll(".nav-btn");
+    toggle.onclick = () => {
+      nav.classList.toggle("active");
+    };
 
-buttons.forEach(btn => {
-
-  btn.addEventListener("click", () => {
-
-    const page = btn.dataset.page;
-
-    slider.style.transform =
-      `translateX(-${page * 100}vw)`;
-
-    buttons.forEach(b =>
-      b.classList.remove("active")
-    );
-
-    btn.classList.add("active");
-
-  });
-
-});
-
-// MATIKAN SCROLL
-
-window.addEventListener(
-  "wheel",
-  e => e.preventDefault(),
-  { passive:false }
-);
-
-window.addEventListener(
-  "touchmove",
-  e => e.preventDefault(),
-  { passive:false }
-);
-
-/* ===================== */
-/* MOBILE MENU */
-/* ===================== */
-
-const menuToggle =
-document.getElementById("menuToggle");
-
-const navLinks =
-document.getElementById("navLinks");
-
-menuToggle.onclick = () => {
-
-  navLinks.classList.toggle("show");
-
-};
-
-</script>
+  </script>
 
 </body>
-
 </html>
